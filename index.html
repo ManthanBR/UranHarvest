@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Step into the world of UrbanHarvest through augmented reality! Engage with interactive features, explore sustainable urban farming, and discover flavors as fresh as homemade chutney—made by Filter You.">
-    <meta name="keywords" content="UrbanHarvest, augmented reality farming, AR experience, interactive farming, sustainable urban farming, digital agriculture, virtual farming, eco-friendly technology, farm-to-table, immersive experience, chutney, organic produce, urban gardening, green technology, Filter You">
+    <meta name="description" content="Step into the world of UrbanHarvest through augmented reality! Engage with interactive features, explore sustainable urban farming, and discover flavors as fresh as homemade chutney—made by Filter You.">
+    <meta name="keywords" content="UrbanHarvest, augmented reality farming, AR experience, interactive farming, sustainable urban farming, digital agriculture, virtual farming, eco-friendly technology, farm-to-table, immersive experience, chutney, organic produce, urban gardening, green technology, Filter You">
     <title>UrbanHarvest</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -141,9 +141,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-D5WRQ5EERK');
 </script>
+  
     <script>
       // Disable double-tap to zoom
       document.addEventListener('touchstart', function (event) {
@@ -491,15 +491,7 @@
           INTERNAL_SMOOTHFACTOR_POS: .075,
       }
       function downloadVideo() {
-           const video = document.getElementById('videoPreview');
-            const a = document.createElement('a');
-              a.href = video.src;
-            a.download = 'video.webm'; //Set the file extension to webm
-            a.style.display = 'none';
-              document.body.appendChild(a);
-             a.click();
-            document.body.removeChild(a);
-         
+        window.unityInstance.SendMessage('ARCamera', 'OnDownloadVideoButtonPressed');
         }
         async function shareVideo() {
            try{
@@ -527,5 +519,5 @@
       }      
     
     </script>
-  </body>
-</html>
+      </body>
+  </html>
